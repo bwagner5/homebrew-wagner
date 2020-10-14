@@ -1,4 +1,4 @@
-class ds < Formula
+class Ds < Formula
   desc "ds is a simple cli tool to get basic stats from datasets"
   homepage "https://github.com/bwagner5/ds"
   version 'v0.1.0'
