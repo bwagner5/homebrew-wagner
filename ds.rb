@@ -18,7 +18,7 @@ class Ds < Formula
   end
 
   def install
-    bin.install ds
+    bin.install 'ds'
   end
 
   test do
