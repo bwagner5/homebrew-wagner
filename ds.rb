@@ -1,19 +1,19 @@
 class Ds < Formula
   desc "ds is a simple cli tool to get basic stats from datasets"
   homepage "https://github.com/bwagner5/ds"
-  version 'v0.1.0'
+  version 'v0.1.1'
   bottle :unneeded
 
   if OS.mac?
-    url "https://github.com/bwagner5/ds/releases/download/v0.1.0/ds-darwin-amd64.tar.gz"
-    sha256 '4abeed6b869330362d5c1d9803cf6ae90446779c8f4e769ca78341279ad9d209'
+    url "https://github.com/bwagner5/ds/releases/download/v0.1.1/ds-darwin-amd64.tar.gz"
+    sha256 'bc73c12b5349d565c803c65ae6ed8ecbf4e7e406b8c5ade4a178b526f122ae3b'
   elsif OS.linux?
     if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/ds/releases/download/v0.1.0/ds-linux-amd64.tar.gz"
-      sha256 'dd72b188139e137cc438aa2f5f4f4da1ade5b447c448b4db502b10fa559cb66a'
+      url "https://github.com/bwagner5/ds/releases/download/v0.1.1/ds-linux-amd64.tar.gz"
+      sha256 '04f9a50f63e2c1929be47eabf993048d68a76c959a4d87ba89f6ae9531e2b641'
     elsif Hardware::CPU.arm?
-      url "https://github.com/bwagner5/ds/releases/download/v0.1.0/ds-linux-arm64.tar.gz"
-      sha256 '24a092d1f2c16df660bc14166b424130a9a40cf68f94817fc9322c77f45cf70a'
+      url "https://github.com/bwagner5/ds/releases/download/v0.1.1/ds-linux-arm64.tar.gz"
+      sha256 '7f27fd95de2f8bd1c165e1ff22c7d84aeecd4e4b4d85332af3d36f683ba9694e'
     end
   end
 
