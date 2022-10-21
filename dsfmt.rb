@@ -5,21 +5,21 @@
 class Dsfmt < Formula
   desc "diskstats formatter for humans"
   homepage "https://github.com/bwagner5/dsfmt"
-  version "0.0.6"
+  version "0.0.7"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bwagner5/dsfmt/releases/download/v0.0.6/dsfmt_0.0.6_Darwin_arm64.tar.gz"
-      sha256 "fa98828ef4209f8c30a1a817320dab8a02efb733eb1ddab58da94dffb0d202b0"
+      url "https://github.com/bwagner5/dsfmt/releases/download/v0.0.7/dsfmt_0.0.7_darwin_arm64.tar.gz"
+      sha256 "ad02b9ce3a11bf617d52851c16fffe929f0810ea9ae5c201461e08bd71ea3398"
 
       def install
         bin.install "dsfmt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/dsfmt/releases/download/v0.0.6/dsfmt_0.0.6_Darwin_amd64.tar.gz"
-      sha256 "95b4ec0693fa3d751f3787199b9e51c30d38740c0c1a278cbb1ea86725a3888e"
+      url "https://github.com/bwagner5/dsfmt/releases/download/v0.0.7/dsfmt_0.0.7_darwin_amd64.tar.gz"
+      sha256 "ae29e1cd0e91d3b434368406d2017a0a879183f24920ac4298e1c44bd88b018b"
 
       def install
         bin.install "dsfmt"
@@ -29,16 +29,16 @@ class Dsfmt < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bwagner5/dsfmt/releases/download/v0.0.6/dsfmt_0.0.6_Linux_arm64.tar.gz"
-      sha256 "28222ff5cc5e0d38857e063b2301f253995439de5d3a42e8e4cd5056ff89575f"
+      url "https://github.com/bwagner5/dsfmt/releases/download/v0.0.7/dsfmt_0.0.7_linux_arm64.tar.gz"
+      sha256 "faa757a530db36aa18a82192a2e08e43771d82e3a607d27b44792ec5a91bdeee"
 
       def install
         bin.install "dsfmt"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/dsfmt/releases/download/v0.0.6/dsfmt_0.0.6_Linux_amd64.tar.gz"
-      sha256 "7ec23e973b851b6deeb8f624df2abc77e70874295640e5e4ea0f97b3918dae70"
+      url "https://github.com/bwagner5/dsfmt/releases/download/v0.0.7/dsfmt_0.0.7_linux_amd64.tar.gz"
+      sha256 "35c42c34f480468edead52edf9634f55405ff4c524c3cc99d6f4e2cbf5696b35"
 
       def install
         bin.install "dsfmt"
