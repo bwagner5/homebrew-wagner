@@ -5,21 +5,21 @@
 class Quant < Formula
   desc "an SI numeric conversion and display tool"
   homepage "https://github.com/bwagner5/quant"
-  version "0.0.7"
+  version "0.0.8"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/quant/releases/download/v0.0.7/quant_0.0.7_darwin_amd64.tar.gz"
-      sha256 "46e113e125bc4ccff2e9f1638d0c7999da6f8aa693a3cb3485f39fe52c004ec3"
+    if Hardware::CPU.arm?
+      url "https://github.com/bwagner5/quant/releases/download/v0.0.8/quant_0.0.8_darwin_arm64.tar.gz"
+      sha256 "0c78793af0721b8770b2151378c32ea2e3205bcab2ef2d13fa3afb626937fb9a"
 
       def install
         bin.install "quant"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bwagner5/quant/releases/download/v0.0.7/quant_0.0.7_darwin_arm64.tar.gz"
-      sha256 "1424fc8d8f6492ad7cbc10572d035490a5a9c64c25ae1eee774553fc09c2b648"
+    if Hardware::CPU.intel?
+      url "https://github.com/bwagner5/quant/releases/download/v0.0.8/quant_0.0.8_darwin_amd64.tar.gz"
+      sha256 "430ab441eeb35a928b1d32fd6f4aa0f5803c19ab1bca196a8f1b8e5228801e12"
 
       def install
         bin.install "quant"
@@ -29,16 +29,16 @@ class Quant < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bwagner5/quant/releases/download/v0.0.7/quant_0.0.7_linux_arm64.tar.gz"
-      sha256 "8ce1cd7d920e1a22d1d4ca20532d56350fd633f51d1a1ea0307a7b6b8e2eff7e"
+      url "https://github.com/bwagner5/quant/releases/download/v0.0.8/quant_0.0.8_linux_arm64.tar.gz"
+      sha256 "14ac714e45d6feb02f6212eec91d6d5f144446ab27073761c1e1eb3ac3596920"
 
       def install
         bin.install "quant"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/quant/releases/download/v0.0.7/quant_0.0.7_linux_amd64.tar.gz"
-      sha256 "a6a5824492219bc798b4e53feaf34a0bed9e7c3213e1aac37d774af0f66fedd3"
+      url "https://github.com/bwagner5/quant/releases/download/v0.0.8/quant_0.0.8_linux_amd64.tar.gz"
+      sha256 "8b4147c5766ed145eab26f5947f5edd367db6410a6068bbc7d5aaa6734e8ee97"
 
       def install
         bin.install "quant"
