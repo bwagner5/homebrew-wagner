@@ -5,21 +5,21 @@
 class Quant < Formula
   desc "an SI numeric conversion and display tool"
   homepage "https://github.com/bwagner5/quant"
-  version "0.0.5"
+  version "0.0.6"
   license "MIT"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bwagner5/quant/releases/download/v0.0.5/quant_0.0.5_darwin_arm64.tar.gz"
-      sha256 "cfe9f24dae81fd1951f59e6b3b86c378e7dad6adc970b120814f8271c7b6c1d6"
+      url "https://github.com/bwagner5/quant/releases/download/v0.0.6/quant_0.0.6_darwin_arm64.tar.gz"
+      sha256 "fbc409ced79f9ca64c344d8853b87a5b018b83e851e32bee75a1a9bd79d6ef95"
 
       def install
         bin.install "quant"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/quant/releases/download/v0.0.5/quant_0.0.5_darwin_amd64.tar.gz"
-      sha256 "00dbcf05c822418030003ac226e942b6b330832b2db26277d97c1c322af195da"
+      url "https://github.com/bwagner5/quant/releases/download/v0.0.6/quant_0.0.6_darwin_amd64.tar.gz"
+      sha256 "916b530040b8187974aae23b6ab391d8b40e931f9cb63be23121675ec68cc31a"
 
       def install
         bin.install "quant"
@@ -29,16 +29,16 @@ class Quant < Formula
 
   on_linux do
     if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/quant/releases/download/v0.0.5/quant_0.0.5_linux_amd64.tar.gz"
-      sha256 "1ffe4c5f7debe8dea6e347a4c03c918185e3955a407b71e54120b909321fef44"
+      url "https://github.com/bwagner5/quant/releases/download/v0.0.6/quant_0.0.6_linux_amd64.tar.gz"
+      sha256 "0103d8ece868fb475b43c2134072df5e73a99ca49941275e3616a15b8234705a"
 
       def install
         bin.install "quant"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bwagner5/quant/releases/download/v0.0.5/quant_0.0.5_linux_arm64.tar.gz"
-      sha256 "b4a2d04b83fc7c604b2a7cb5dc3851fc3eb1c73c4244a74f6bfe85c7c9bff287"
+      url "https://github.com/bwagner5/quant/releases/download/v0.0.6/quant_0.0.6_linux_arm64.tar.gz"
+      sha256 "b5fe1b6d512b738fff429724d08a227883d69038bc458c5d64649ca7533fcd1a"
 
       def install
         bin.install "quant"
