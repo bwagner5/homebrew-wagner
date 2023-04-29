@@ -5,21 +5,21 @@
 class Quant < Formula
   desc "an SI numeric conversion and display tool"
   homepage "https://github.com/bwagner5/quant"
-  version "0.0.6"
+  version "0.0.7"
   license "MIT"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/bwagner5/quant/releases/download/v0.0.6/quant_0.0.6_darwin_arm64.tar.gz"
-      sha256 "fbc409ced79f9ca64c344d8853b87a5b018b83e851e32bee75a1a9bd79d6ef95"
+    if Hardware::CPU.intel?
+      url "https://github.com/bwagner5/quant/releases/download/v0.0.7/quant_0.0.7_darwin_amd64.tar.gz"
+      sha256 "46e113e125bc4ccff2e9f1638d0c7999da6f8aa693a3cb3485f39fe52c004ec3"
 
       def install
         bin.install "quant"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/quant/releases/download/v0.0.6/quant_0.0.6_darwin_amd64.tar.gz"
-      sha256 "916b530040b8187974aae23b6ab391d8b40e931f9cb63be23121675ec68cc31a"
+    if Hardware::CPU.arm?
+      url "https://github.com/bwagner5/quant/releases/download/v0.0.7/quant_0.0.7_darwin_arm64.tar.gz"
+      sha256 "1424fc8d8f6492ad7cbc10572d035490a5a9c64c25ae1eee774553fc09c2b648"
 
       def install
         bin.install "quant"
@@ -28,17 +28,17 @@ class Quant < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/quant/releases/download/v0.0.6/quant_0.0.6_linux_amd64.tar.gz"
-      sha256 "0103d8ece868fb475b43c2134072df5e73a99ca49941275e3616a15b8234705a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bwagner5/quant/releases/download/v0.0.7/quant_0.0.7_linux_arm64.tar.gz"
+      sha256 "8ce1cd7d920e1a22d1d4ca20532d56350fd633f51d1a1ea0307a7b6b8e2eff7e"
 
       def install
         bin.install "quant"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bwagner5/quant/releases/download/v0.0.6/quant_0.0.6_linux_arm64.tar.gz"
-      sha256 "b5fe1b6d512b738fff429724d08a227883d69038bc458c5d64649ca7533fcd1a"
+    if Hardware::CPU.intel?
+      url "https://github.com/bwagner5/quant/releases/download/v0.0.7/quant_0.0.7_linux_amd64.tar.gz"
+      sha256 "a6a5824492219bc798b4e53feaf34a0bed9e7c3213e1aac37d774af0f66fedd3"
 
       def install
         bin.install "quant"
