@@ -5,21 +5,21 @@
 class Vpcctl < Formula
   desc "a VPC management tool"
   homepage "https://github.com/bwagner5/vpcctl"
-  version "0.0.2"
+  version "0.0.4"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/bwagner5/vpcctl/releases/download/v0.0.2/vpcctl_0.0.2_darwin_arm64.tar.gz"
-      sha256 "78b2bb8c63094f9675db25fc0388d7f27bafdb39956c173ad263202e3d4278ad"
+    if Hardware::CPU.intel?
+      url "https://github.com/bwagner5/vpcctl/releases/download/v0.0.4/vpcctl_0.0.4_darwin_amd64.tar.gz"
+      sha256 "35880c1d9ab2e7b2afd0d2b6e1aebd132fcb1202e868f3ab607d00c39ecf4274"
 
       def install
         bin.install "vpcctl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/vpcctl/releases/download/v0.0.2/vpcctl_0.0.2_darwin_amd64.tar.gz"
-      sha256 "cb6803d69c16dde005b059f6769c56504e587c7b54937f7975f14777c39a2bd2"
+    if Hardware::CPU.arm?
+      url "https://github.com/bwagner5/vpcctl/releases/download/v0.0.4/vpcctl_0.0.4_darwin_arm64.tar.gz"
+      sha256 "4fe6cb11975d62e67d7bc6894ee5d3c316ef973de9edc6bc19e36d67c6f7e9fd"
 
       def install
         bin.install "vpcctl"
@@ -28,17 +28,17 @@ class Vpcctl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bwagner5/vpcctl/releases/download/v0.0.2/vpcctl_0.0.2_linux_arm64.tar.gz"
-      sha256 "f68de15177761ac0c3c9bcbc01c610800dcfd9d4a63800c4de6cb2ba2324e57d"
+    if Hardware::CPU.intel?
+      url "https://github.com/bwagner5/vpcctl/releases/download/v0.0.4/vpcctl_0.0.4_linux_amd64.tar.gz"
+      sha256 "3cd301bc7ab826287ba76eb844cb4624aa20276fa33753d9d206b98e07fc2ab5"
 
       def install
         bin.install "vpcctl"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/vpcctl/releases/download/v0.0.2/vpcctl_0.0.2_linux_amd64.tar.gz"
-      sha256 "0ead0cfd0614c5cb772318f4cdca31f3515d5fe93ad794641808f1cefeb0f756"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bwagner5/vpcctl/releases/download/v0.0.4/vpcctl_0.0.4_linux_arm64.tar.gz"
+      sha256 "4c2904aaead97e4266238f58bdaf5409ee50ca00e21cf900895314b10e2b3ffb"
 
       def install
         bin.install "vpcctl"
