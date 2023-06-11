@@ -5,21 +5,21 @@
 class Amictl < Formula
   desc "amictl"
   homepage "https://github.com/bwagner5/amictl"
-  version "0.0.1"
+  version "0.0.2"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/amictl/releases/download/v0.0.1/amictl_0.0.1_darwin_amd64.tar.gz"
-      sha256 "e0cb061af0b6bb4b675e397a8fb1a54788f7d53128832188de055af4be2b0eca"
+    if Hardware::CPU.arm?
+      url "https://github.com/bwagner5/amictl/releases/download/v0.0.2/amictl_0.0.2_darwin_arm64.tar.gz"
+      sha256 "f7e743a97d753f1ccecec8df2ded92e7c3c5eb50a672488441025b0e94b1cf9c"
 
       def install
         bin.install "amictl"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/bwagner5/amictl/releases/download/v0.0.1/amictl_0.0.1_darwin_arm64.tar.gz"
-      sha256 "eee4de58321359993203a901f8ece616a5210d2cca8f79bbc0bbc25d02a13cf7"
+    if Hardware::CPU.intel?
+      url "https://github.com/bwagner5/amictl/releases/download/v0.0.2/amictl_0.0.2_darwin_amd64.tar.gz"
+      sha256 "168e36061ac61ea7b943f2a6df95a462fc61d0ab0902254d04baaff265afa3c3"
 
       def install
         bin.install "amictl"
@@ -28,17 +28,17 @@ class Amictl < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/amictl/releases/download/v0.0.1/amictl_0.0.1_linux_amd64.tar.gz"
-      sha256 "685c14c8fdbd05e1be98b5701c4631848594401fa5fdf336eda547bd6c994039"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bwagner5/amictl/releases/download/v0.0.2/amictl_0.0.2_linux_arm64.tar.gz"
+      sha256 "5bcb76a23a2517c7d921f50174080b66aad1cefceb6ce6753546cf80a37daa25"
 
       def install
         bin.install "amictl"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bwagner5/amictl/releases/download/v0.0.1/amictl_0.0.1_linux_arm64.tar.gz"
-      sha256 "a7a9981e4ddc7da10627badbd80d6645019b3e53679342617af689597f40f4f0"
+    if Hardware::CPU.intel?
+      url "https://github.com/bwagner5/amictl/releases/download/v0.0.2/amictl_0.0.2_linux_amd64.tar.gz"
+      sha256 "9fa3fd3b886160e7b93a7180ee9c6eec63e0231e73506ad3b3a89a6babbf6830"
 
       def install
         bin.install "amictl"
