@@ -5,21 +5,21 @@
 class Inflate < Formula
   desc "inflate"
   homepage "https://github.com/bwagner5/inflate"
-  version "0.0.1"
+  version "0.0.2"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bwagner5/inflate/releases/download/v0.0.1/inflate_0.0.1_darwin_arm64.tar.gz"
-      sha256 "e161ca089501f1d28471d07745cb73f2544d46ee867cfce9d1ecd9780f9d4836"
+      url "https://github.com/bwagner5/inflate/releases/download/v0.0.2/inflate_0.0.2_darwin_arm64.tar.gz"
+      sha256 "293fd4a92fd9baef44ba7e248aed99c766861545bc10699179a6b153c6408673"
 
       def install
         bin.install "inflate"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/inflate/releases/download/v0.0.1/inflate_0.0.1_darwin_amd64.tar.gz"
-      sha256 "0f47852360670c66333a7dc9ad376c9133f019c694e5a320e5a10bb299e1e2ee"
+      url "https://github.com/bwagner5/inflate/releases/download/v0.0.2/inflate_0.0.2_darwin_amd64.tar.gz"
+      sha256 "d3abb1287a8be0939ce69d6f2b8cc99412e037b2f8b8ae228cd1c83102ff9eec"
 
       def install
         bin.install "inflate"
@@ -29,16 +29,16 @@ class Inflate < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bwagner5/inflate/releases/download/v0.0.1/inflate_0.0.1_linux_arm64.tar.gz"
-      sha256 "c41318799c6cf444932b954981c94544221b230018ac3ce6508f3c2c0e99f713"
+      url "https://github.com/bwagner5/inflate/releases/download/v0.0.2/inflate_0.0.2_linux_arm64.tar.gz"
+      sha256 "90e071cbb6b039623a32abc916151b96584b0c11d38499751f54dd410c766479"
 
       def install
         bin.install "inflate"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/inflate/releases/download/v0.0.1/inflate_0.0.1_linux_amd64.tar.gz"
-      sha256 "67a547300e15ea249b8e7284ada82c134fd933790ce254d406de0757b56a5aa3"
+      url "https://github.com/bwagner5/inflate/releases/download/v0.0.2/inflate_0.0.2_linux_amd64.tar.gz"
+      sha256 "bf9619c25c5f8c7e1fdd7bb5faebcd6dfd8fe724cc1f2f69c8d2af49e768aec2"
 
       def install
         bin.install "inflate"
