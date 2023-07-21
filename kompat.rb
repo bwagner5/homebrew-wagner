@@ -5,21 +5,21 @@
 class Kompat < Formula
   desc "kompat"
   homepage "https://github.com/bwagner5/kompat"
-  version "0.0.1"
+  version "0.0.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bwagner5/kompat/releases/download/v0.0.1/kompat_0.0.1_darwin_arm64.tar.gz"
-      sha256 "c2d1d350141aa476a05bfde11f1851428143937eb33cf6186eefd66614dcb8a6"
+      url "https://github.com/bwagner5/kompat/releases/download/v0.0.6/kompat_0.0.6_darwin_arm64.tar.gz"
+      sha256 "dd3abefb662e195b8d3a71fd785b865bcb6003888c1e1efbabab11b96d3cdbc5"
 
       def install
         bin.install "kompat"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/kompat/releases/download/v0.0.1/kompat_0.0.1_darwin_amd64.tar.gz"
-      sha256 "6160ac0b6e9cd47b388ad5bdd2e844abfa9b7568ea2f3b082ee2c09d0bc4415d"
+      url "https://github.com/bwagner5/kompat/releases/download/v0.0.6/kompat_0.0.6_darwin_amd64.tar.gz"
+      sha256 "0fe0c1fc5d3dfaacd88fd27d21f81a4b54509148d98bb4c7673cbc14c745186f"
 
       def install
         bin.install "kompat"
@@ -29,16 +29,16 @@ class Kompat < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bwagner5/kompat/releases/download/v0.0.1/kompat_0.0.1_linux_arm64.tar.gz"
-      sha256 "7113fb81537eeab028171e1d5bfe3346474464529bc3080a40aaec0b3bf68716"
+      url "https://github.com/bwagner5/kompat/releases/download/v0.0.6/kompat_0.0.6_linux_arm64.tar.gz"
+      sha256 "753f80e2f841e8fc35fbf4d66d5d8e2b9b8de7b99a2bce01f709f2effd48da5d"
 
       def install
         bin.install "kompat"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/kompat/releases/download/v0.0.1/kompat_0.0.1_linux_amd64.tar.gz"
-      sha256 "9ff335b07b1c844be353bc1712de670c856448535849dd535c0032bfee4f779d"
+      url "https://github.com/bwagner5/kompat/releases/download/v0.0.6/kompat_0.0.6_linux_amd64.tar.gz"
+      sha256 "17044b8f4d4303cbc9179f766c43e1ea657d6a3cdb74b3426981ec827ebe6c13"
 
       def install
         bin.install "kompat"
