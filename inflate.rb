@@ -5,21 +5,21 @@
 class Inflate < Formula
   desc "inflate"
   homepage "https://github.com/bwagner5/inflate"
-  version "0.0.5"
+  version "0.0.6"
   license "Apache-2.0"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/bwagner5/inflate/releases/download/v0.0.5/inflate_0.0.5_darwin_arm64.tar.gz"
-      sha256 "6355ec0e04b4b8ca39f0dfafc4f5901e15211c7bc3ff6b506bee7b81c47a1419"
+      url "https://github.com/bwagner5/inflate/releases/download/v0.0.6/inflate_0.0.6_darwin_arm64.tar.gz"
+      sha256 "dd274021b33ccfe34f60445b2090c98942a9f89fc5f7ce9c17770b26c8d9f0cf"
 
       def install
         bin.install "inflate"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/inflate/releases/download/v0.0.5/inflate_0.0.5_darwin_amd64.tar.gz"
-      sha256 "d04362dc4c96427bf267810b166d229e9c1d69e19d276026891b5e6fbaebcbca"
+      url "https://github.com/bwagner5/inflate/releases/download/v0.0.6/inflate_0.0.6_darwin_amd64.tar.gz"
+      sha256 "a70f63de1357bc8bfd8b919301e27a75517d24001a512df95267fa82f69dbc51"
 
       def install
         bin.install "inflate"
@@ -28,17 +28,17 @@ class Inflate < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/inflate/releases/download/v0.0.5/inflate_0.0.5_linux_amd64.tar.gz"
-      sha256 "a32a3ada997ae9d6afb054f174ffdd38bb0dbc1b14c86bf20ff91b9492e100ff"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/bwagner5/inflate/releases/download/v0.0.6/inflate_0.0.6_linux_arm64.tar.gz"
+      sha256 "1351ca511ffc27d9b3b8aff68cd159143db7c256824433a1b4fd40e20b8f40c4"
 
       def install
         bin.install "inflate"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bwagner5/inflate/releases/download/v0.0.5/inflate_0.0.5_linux_arm64.tar.gz"
-      sha256 "1f2ff299cb081b1a8b0df633a7519ef9ca7f9ca3e64917cad932472aff33bbeb"
+    if Hardware::CPU.intel?
+      url "https://github.com/bwagner5/inflate/releases/download/v0.0.6/inflate_0.0.6_linux_amd64.tar.gz"
+      sha256 "d95850826f4e89c82577cd7e56a831d62b9cd73a43fa43cb2d45e1f8c4c63a4f"
 
       def install
         bin.install "inflate"
