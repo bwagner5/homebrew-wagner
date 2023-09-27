@@ -5,21 +5,21 @@
 class Inflate < Formula
   desc "inflate"
   homepage "https://github.com/bwagner5/inflate"
-  version "0.0.2"
+  version "0.0.4"
   license "Apache-2.0"
 
   on_macos do
-    if Hardware::CPU.arm?
-      url "https://github.com/bwagner5/inflate/releases/download/v0.0.2/inflate_0.0.2_darwin_arm64.tar.gz"
-      sha256 "293fd4a92fd9baef44ba7e248aed99c766861545bc10699179a6b153c6408673"
+    if Hardware::CPU.intel?
+      url "https://github.com/bwagner5/inflate/releases/download/v0.0.4/inflate_0.0.4_darwin_amd64.tar.gz"
+      sha256 "d00a4ac181e255cba6daf9d992e81398c03ec9c262b37f1959ae182a7611f664"
 
       def install
         bin.install "inflate"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/inflate/releases/download/v0.0.2/inflate_0.0.2_darwin_amd64.tar.gz"
-      sha256 "d3abb1287a8be0939ce69d6f2b8cc99412e037b2f8b8ae228cd1c83102ff9eec"
+    if Hardware::CPU.arm?
+      url "https://github.com/bwagner5/inflate/releases/download/v0.0.4/inflate_0.0.4_darwin_arm64.tar.gz"
+      sha256 "30aea2470567a668f836b0efdb3b1adf476d75feef90d6d95723d6edaefcddaa"
 
       def install
         bin.install "inflate"
@@ -29,16 +29,16 @@ class Inflate < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/bwagner5/inflate/releases/download/v0.0.2/inflate_0.0.2_linux_arm64.tar.gz"
-      sha256 "90e071cbb6b039623a32abc916151b96584b0c11d38499751f54dd410c766479"
+      url "https://github.com/bwagner5/inflate/releases/download/v0.0.4/inflate_0.0.4_linux_arm64.tar.gz"
+      sha256 "162938ec4746114e105436ef1f6796385ae54c3d0d961a2a395ffee0256b0c36"
 
       def install
         bin.install "inflate"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/bwagner5/inflate/releases/download/v0.0.2/inflate_0.0.2_linux_amd64.tar.gz"
-      sha256 "bf9619c25c5f8c7e1fdd7bb5faebcd6dfd8fe724cc1f2f69c8d2af49e768aec2"
+      url "https://github.com/bwagner5/inflate/releases/download/v0.0.4/inflate_0.0.4_linux_amd64.tar.gz"
+      sha256 "abdb393be0f38625f0b2cc63c4e19d8c7781b378a19dfca541111cc626602074"
 
       def install
         bin.install "inflate"
