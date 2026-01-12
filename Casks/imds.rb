@@ -3,7 +3,7 @@ cask "imds" do
   name "imds"
   desc "CLI and TUI for EC2 Instance Metadata Service (IMDS)"
   homepage "https://github.com/bwagner5/imds"
-  version "0.0.6"
+  version "0.0.7"
 
   livecheck do
     skip "Auto-generated on release."
@@ -14,22 +14,22 @@ cask "imds" do
   on_macos do
     on_intel do
       url "https://github.com/bwagner5/imds/releases/download/v#{version}/imds_#{version}_darwin_amd64.tar.gz"
-      sha256 "23b426f336bbdb5567f29b0afacb8e0f4d71db4451d4d19567bb4bf57783d2d9"
+      sha256 "c727320e7a8a5713d7ae5fefbf51abfe803da9c26b5f9634c2df53172fa544bc"
     end
     on_arm do
       url "https://github.com/bwagner5/imds/releases/download/v#{version}/imds_#{version}_darwin_arm64.tar.gz"
-      sha256 "01767c5a115465c57cd4c79c26dca197904da718ac06d6d9f9bcd9bebaa1f27e"
+      sha256 "2961ef9628ad04f304008321e65d45d42c1fc0bb89c73a3b37d9771060d7fd11"
     end
   end
 
   on_linux do
     on_intel do
       url "https://github.com/bwagner5/imds/releases/download/v#{version}/imds_#{version}_linux_amd64.tar.gz"
-      sha256 "19cf573cfcbc48ccf4cd75fccd3bb54c77e5f44ca95eab2474ad8fd12a5984e8"
+      sha256 "741507c2505e026192fdf7cfcbaf312d716c13a3a666d427f94a465c215332a9"
     end
     on_arm do
       url "https://github.com/bwagner5/imds/releases/download/v#{version}/imds_#{version}_linux_arm64.tar.gz"
-      sha256 "c2c657e2a29aedd5dce044491f90184b01c98b5b67ee09ff28e1e2daef7a12dd"
+      sha256 "bd6b1dfc585da9aee6a26d558e9f101342815d44db7a48a421ef49e63332eb4f"
     end
   end
 
